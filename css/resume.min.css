@@ -117,9 +117,19 @@ p.lead {
     }
 
     #sideNav .navbar-brand .img-profile {
-        max-width: 13rem;
-        max-height: 13rem;
-        border: .4rem solid rgba(255, 255, 255, .2)
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        max-width: 10rem;
+        max-height: 10rem;
+        border: .4rem solid rgba(14, 8, 8, 0.2)
+    }
+
+    #sideNav .navbar-brand .img-profile:hover {
+
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
 
     #sideNav .navbar-collapse {
@@ -140,6 +150,17 @@ p.lead {
     }
 
     #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+        color: #233237;
+        display: block
+    }
+
+    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+        color: #fff;
+        display: block
+    }
+
+    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:focus {
+        color: #fff;
         display: block
     }
 }
