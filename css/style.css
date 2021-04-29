@@ -3,11 +3,13 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
-
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  padding-top: 54px;
-  color: #868e96;
+  font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  color: #e7dfdd;
+  background-color: #0e0b16;
 }
 
 @media (min-width: 992px) {
@@ -23,10 +25,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: #4717f6;
+}
+
+hr {
+  background-color: #e7dfdd;
 }
 
 h1 {
@@ -45,13 +53,7 @@ h3 {
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
-}
-
-.subheading {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1.5rem;
+  text-align: justify;
 }
 
 .dev-icons {
@@ -59,7 +61,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #4717f6;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -69,7 +71,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #233237;
 }
 
 @media (min-width: 992px) {
@@ -83,16 +85,28 @@ p.lead {
     width: 17rem;
     height: 100vh;
   }
+
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
   }
+
   #sideNav .navbar-brand .img-profile {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 2s ease-in-out;
+    transition: 0.3s ease-in-out;
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.4rem solid rgba(14, 8, 8, 0.2);
   }
+
+  #sideNav .navbar-brand .img-profile:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+
   #sideNav .navbar-collapse {
     display: flex;
     align-items: flex-start;
@@ -100,14 +114,28 @@ p.lead {
     width: 100%;
     margin-bottom: auto;
   }
+
   #sideNav .navbar-collapse .navbar-nav {
     flex-direction: column;
     width: 100%;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: #e7dfdd;
+    display: block;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: #a239ca;
+    display: block;
+  }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:focus {
+    color: #a239ca;
     display: block;
   }
 }
@@ -126,6 +154,7 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     min-height: 100vh;
   }
+
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
@@ -139,17 +168,76 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #4717f6 !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #a239ca !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #a239ca;
 }
 
-a:hover, a:focus, a:active {
-  color: #824027;
+a:active,
+a:focus,
+a:hover {
+  color: #a239ca;
+}
+
+.iconbtn {
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  margin: 20px;
+  position: relative;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.iconbtn::before {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconbtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.s1 {
+  text-align: center;
+}
+
+.s1 .iconbtn {
+  color: #e7dfdd;
+}
+
+.s1 .iconbtn::after {
+  border: 4px dashed;
+  color: #a239ca;
+}
+
+.s1 .iconbtn:hover::after {
+  animation: ro 7s linear infinite;
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
