@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgb(253 , 255 , 255);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: rgb(65 , 25 , 127);
+}
+
+header p {
+  font-size: 0.9rem;
+  color: rgb(38 , 39 , 43);
+  font-style: italic;
+}
+
+main {
+  margin-top: 75px;
+  text-align: center;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+.todo-list input {
+  width: 75%;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 0;
+  border-bottom: 2px solid rgb(0 , 109 , 251);
+}
+
+.todo-list input:focus {
+  outline: none;
+}
+
+.todo-list p {
+  margin-top: 20px;
+}
+
+.todo-list button {
+  background-color: rgb(47 , 193 , 140);
+  padding: 10px;
+  font-size: 1.2rem;
+  color: white;
+  border: 0;
+}
+
+.todo-list button:hover , .todo-list button:focus {
+  background-color: rgb(33 , 134 , 97);
+  border: rgb(47 , 193 , 140);
+}
+
+.todo-list ol {
+  margin-top: 75px;
+  font-size: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  width: 738px;
+}
+
+.todo-list h3 {
+  font-size: 2rem;
+  color: rgb(65 , 25 , 127);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.selected {
+  background-color: gray;
+}
