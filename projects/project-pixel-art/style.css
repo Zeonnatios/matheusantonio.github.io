@@ -8,7 +8,7 @@ h1 {
 }
 
 body {
-  background-image: url('background-image.jpg');
+  background-image: url('background-image.png');
   background-size: cover;
   display: flex;
   flex-direction: column;
