@@ -50,10 +50,6 @@ main {
 /**
 Cards retirados de: https://bootsnipp.com/snippets/rlMx8
 */
-a {
-  color: #000;
-}
-
 .card {
   background-color: #ffffff;
   padding: 0;
@@ -70,18 +66,24 @@ a {
   color: black;
 }
 
+.card-img-top:hover img {
+  transform: scale(1.6) rotate(25deg) !important;
+}
+
 .links {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-around;
 }
 
-a {
+.links a {
   font-size: 2rem;
   width: 100px;
   height: 100px;
   line-height: 100px;
   transition: 0.4s linear;
   position: relative;
+  color: black;
 }
 
 .links::before,
@@ -98,6 +100,7 @@ a {
 
 .links a:hover {
   transform: scale(0.8);
+  color: #4717f6;
 }
 
 .links a:hover::after {
