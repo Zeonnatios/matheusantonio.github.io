@@ -5,6 +5,7 @@
 
 h1 {
   text-align: center;
+  font-weight: 900;
 }
 
 body {
@@ -20,6 +21,15 @@ header {
   padding: 15px 0;
 }
 
+label {
+  font-weight: 700;
+}
+
+table, td, th {
+  border-collapse: collapse;
+  border: 8px solid #fc3458;
+}
+
 .color {
   border: 1px solid black;
   width: 50px;
@@ -28,10 +38,10 @@ header {
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 1px solid black;
-  display: inline-block;
+
   background-color: white;
 }
 
@@ -60,22 +70,47 @@ button {
 }
 
 .menu {
-  width: 30%;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   padding: 15px;
 }
 
-.menu label {
+.sub {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-right: 5px;
+  align-self: stretch;
+  margin: 15px 0;
+}
+
+.sub label {
   font-size: 18px;
+  font-weight: 700;
+}
+
+.sub input {
+  align-self: stretch;
+  font-size: 18px;
+  font-weight: 600;
+  border: solid 2px #3a2280;
+  border-radius: 5px;
+  margin: 0 5px;
 }
 
 .menu button {
   margin-right: 5px;
-  padding: 5px;
-  width: 20%;
+  padding: 10px 15px;
+  align-self: stretch;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: #fc3458;
+}
+
+.menu button:hover {
+  background-color: #3a2280;
 }
