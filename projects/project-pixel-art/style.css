@@ -3,11 +3,6 @@
   margin: 0;
 }
 
-h1 {
-  text-align: center;
-  font-weight: 900;
-}
-
 body {
   background-image: url('background-image.png');
   background-size: cover;
@@ -15,10 +10,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #fc3458;
+  font-size: 12px;
 }
 
 header {
   padding: 15px 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem;
 }
 
 label {
@@ -113,4 +115,29 @@ button {
 
 .menu button:hover {
   background-color: #3a2280;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(38, 39, 43);
+  font-size: 1.2rem;
+  color: white;
+  padding: 15px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+span {
+  color: #fc3458;
+}
+
+footer a {
+  color: rgb(253, 251, 251);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fc3458;
 }
