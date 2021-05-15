@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: rgb(50, 167, 145);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+.header img {
+  width: 50px;
+}
+
+.header input {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.header button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.header .form-control {
+  align-self: center;
+}
+
+.trybewarts-login {
+  display: flex;
+}
+
+main {
+  display: flex;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  width: 675px;
+  padding: 15px 75px;
+}
+
+.main-form input {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.main-form input [type='checkbox'] {
+  margin-left: 15px;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.py {
+  padding: 10px 0;
+}
+
+.row label {
+  align-self: center;
+  padding-right: 5px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+}
+
+#label-family {
+  margin-bottom: 15px;
+}
+
+#counter {
+  display: flex;
+  margin-top: -10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+
+.textarea {
+  font-weight: bold;
+}
+
+textarea {
+  margin-bottom: 15px;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(38, 39, 43);
+  font-size: 1.2rem;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#label-family,
+#label-content,
+#label-rate,
+#label-infos {
+  font-weight: bold;
+}
