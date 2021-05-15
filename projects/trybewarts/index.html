@@ -101,44 +101,66 @@
         </div>
 
         <div class="row">
-          <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
-          <input type="radio" name="rate" value="1" />1
-          <input type="radio" name="rate" value="2" />2
-          <input type="radio" name="rate" value="3" />3
-          <input type="radio" name="rate" value="4" />4
-          <input type="radio" name="rate" value="5" />5
-          <input type="radio" name="rate" value="6" />6
-          <input type="radio" name="rate" value="7" />7
-          <input type="radio" name="rate" value="8" />8
-          <input type="radio" name="rate" value="9" />9
-          <input type="radio" name="rate" value="10" />10
+          <p id="label-rate">Como você avalia a Trybewarts?</p>
+          <div class="col row">
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="1" class="form-check-input" id="item1"/>
+              <label class="form-check-label" for="item1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="2" class="form-check-input" id="item2"/>
+              <label class="form-check-label" for="item2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="3" class="form-check-input" id="item3"/>
+              <label class="form-check-label" for="item3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="4" class="form-check-input" id="item4"/>
+              <label class="form-check-label" for="item4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="5" class="form-check-input" id="item5"/>
+              <label class="form-check-label" for="item5">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="6" class="form-check-input" id="item6"/>
+              <label class="form-check-label" for="item6">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="7" class="form-check-input" id="item7"/>
+              <label class="form-check-label" for="item7">7</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="8" class="form-check-input" id="item8"/>
+              <label class="form-check-label" for="item8">8</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="9" class="form-check-input" id="item9"/>
+              <label class="form-check-label" for="item9">9</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="rate" value="10" class="form-check-input" id="item10"/>
+              <label class="form-check-label" for="item10">10</label>
+            </div>
+          </div>
         </div>
 
-        <label for="" class="textarea">Deixe seu comentário:</label>
-        <textarea
-          name=""
-          id="textarea"
-          cols="30"
-          rows="7"
-          maxlength="500"
-        ></textarea>
-        <span id="counter">500</span>
-
-        <div>
-          <label for="" id="label-infos"
-            >Você concorda com o uso das informações acima?</label
-          >
-          <input type="checkbox" name="" id="agreement" required />
+        <div class="form-group">
+          <label for="textarea" class="textarea">Deixe seu comentário:</label>
+          <textarea class="form-control" id="textarea" rows="5" maxlength="500"></textarea>
+          <span id="counter">500</span>
         </div>
 
-        <button class="btn" type="submit" id="submit-btn">Enviar</button>
+        <div class="form-group">
+          <label id="label-infos" class="form-check-label" for="agreement">Você concorda com o uso das informações acima?</label>
+          <input type="checkbox" id="agreement" required />
+        </div>
+
+        <button class="btn btn-success" type="submit" id="submit-btn">Enviar</button>
       </form>
 
-      <img
-        src="images/trybewarts-colored.svg"
-        alt="Trybewarts Logo"
-        id="trybewarts-forms-logo"
-      />
+      <img src="images/trybewarts-colored.svg" alt="Trybewarts Logo" id="trybewarts-forms-logo" />
     </main>
 
     <footer>

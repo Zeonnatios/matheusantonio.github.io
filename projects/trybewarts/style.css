@@ -51,7 +51,7 @@ main {
   font-size: 14px;
 }
 
-.main-form input [ type = 'checkbox' ] {
+.main-form input [type='checkbox'] {
   margin-left: 15px;
 }
 
@@ -63,11 +63,6 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding: 10px;
-}
-
-.check {
-  justify-content: space-around;
 }
 
 .py {
@@ -102,17 +97,27 @@ main {
   margin: 10px 0;
 }
 
+.textarea {
+  font-weight: bold;
+}
+
 textarea {
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 
 footer {
-  color: white;
-  padding: 5px 0;
-  text-align: center;
+  display: flex;
   background-color: rgb(38, 39, 43);
+  font-size: 1.2rem;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#label-family, #label-content {
+#label-family,
+#label-content,
+#label-rate,
+#label-infos {
   font-weight: bold;
 }
