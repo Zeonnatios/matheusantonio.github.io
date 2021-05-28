@@ -1,5 +1,11 @@
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #efefbb;
   background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
@@ -14,11 +20,12 @@ body {
 }
 
 .container {
-  padding: 40px;
+  padding: 50px;
   margin: 0 auto;
 }
 
 h1 {
+  margin-bottom: 35px;
   text-align: center;
   font-size: 54px;
   color: #f05868;
