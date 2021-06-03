@@ -60,23 +60,35 @@ const failure = `
   </div>
 </article>`;
 
+const isEmpty = `
+<article class="message is-warning">
+  <div class="message-header">
+    <p class="has-text-black">OPS... </p>
+  </div>
+  <div class="message-body">
+    <p class"paragraph is-primary"> Você precisa preencher o campo com o nome do pokemon. ;)</p>
+  </div>
+</article>`;
+
 const setPoints = (event) => {
   const image = document.getElementById('pokemon');
   let points = parseInt(document.querySelector('.points').innerHTML, 10);
   console.log(input.value, image.alt);
-  if (input.value.toLowerCase() === image.alt.toLowerCase()) {
+  if (input.value === '') {
+    input.focus();
+    modalContent.innerHTML = isEmpty;
+    modal.classList.add('is-active');
+  }
+  else if (input.value.toLowerCase() === image.alt.toLowerCase()) {
     points += 1;
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
     input.value = '';
-    input.disabled = true;
-    event.target.disabled = true;
     modalContent.innerHTML = success;
     modal.classList.add('is-active');
-  }
-  else {
+    event.target.disabled = true;
+  } else {
     input.value = '';
-    input.disabled = true;
     event.target.disabled = true;
     modalContent.innerHTML = failure;
     modal.classList.add('is-active');
