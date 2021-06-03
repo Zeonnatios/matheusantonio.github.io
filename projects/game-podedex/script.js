@@ -32,18 +32,25 @@ const nextPokemon = (element) => {
   divImage.appendChild(element);
 };
 
-const setPoints = () => {
-  const input = document.getElementById('input').value;
+const setPoints = (event) => {
+  const input = document.getElementById('input');
   const image = document.getElementById('pokemon');
   let points = parseInt(document.querySelector('.points').innerHTML, 10);
-  console.log(input, image.alt);
-  if (input.toLowerCase() === image.alt.toLowerCase()) {
+  console.log(input.value, image.alt);
+  if (input.value.toLowerCase() === image.alt.toLowerCase()) {
     points += 1;
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
+    input.value = '';
+    event.target.disabled = true;
   }
 };
 
 generateRandomPokemon();
 buttonCheck.addEventListener('click', setPoints);
-buttonNext.addEventListener('click', generateRandomPokemon);
+buttonNext.addEventListener('click', () => {
+  generateRandomPokemon();
+  if (buttonCheck.disabled) {
+    buttonCheck.disabled = false;
+  }
+});
