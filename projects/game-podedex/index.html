@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css"  />
-  <link rel="stylesheet" href="style.css">
-  <title>Quem é esse Pokemon ?</title>
-</head>
-<body>
-  <header>
-    <h1>Quem é esse Pokemon ?</h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../vendor/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Quem é esse Pokemon ?</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quem é esse Pokemon ?</h1>
+    </header>
 
-  <section>
-    <div class="container">
+    <section>
+      <div class="detail-container">
 
-    </div>
-  </section>
-  
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="script.js"></script>
+        <h2>Pontuação:<span class="points">0</span>
+        <button id="next" class="button is-primary is-light">Próximo</button></h2>
 
-</body>
+        <div id="image"></div>
+
+        <div class="control has-icons-left has-icons-right line">
+          <input id="input" class="input is-medium is-primary" type="email" placeholder="Adivinhe o nome do pokemon"> 
+          <button id="check" class="button is-medium is-primary"><i class="fas fa-play"></i></button>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
