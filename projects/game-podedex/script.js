@@ -5,6 +5,7 @@ const modal = document.querySelector('.modal');
 const closeModalButton = document.querySelector('.modal-close');
 const modalContent = document.querySelector('.modal-content');
 const input = document.getElementById('input');
+const bg_background = document.querySelector('.modal-background');
 
 const getRandomIntInclusive = () => {
   min = Math.ceil(1);
@@ -35,6 +36,10 @@ const nextPokemon = (element) => {
   }
   divImage.appendChild(element);
 };
+
+bg_background.addEventListener('click', (event) => {
+  modal.classList.remove('is-active');
+});
 
 closeModalButton.addEventListener('click', (event) => {
   modal.classList.remove('is-active');
@@ -78,8 +83,7 @@ const setPoints = (event) => {
     input.focus();
     modalContent.innerHTML = isEmpty;
     modal.classList.add('is-active');
-  }
-  else if (input.value.toLowerCase() === image.alt.toLowerCase()) {
+  } else if (input.value.toLowerCase() === image.alt.toLowerCase()) {
     points += 1;
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
