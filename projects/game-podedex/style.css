@@ -34,13 +34,23 @@ h1 {
   color: yellow;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   margin-bottom: 25px;
 }
 
 h2 {
   font-size: 24px;
   color: rgb(0, 109, 251);
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.paragraph {
+  font-size: 20px;
   letter-spacing: 2px;
 }
 
@@ -57,6 +67,10 @@ h2 {
 
 i {
   color: white;
+}
+
+.message-body {
+  background-color: #000;
 }
 
 .line {

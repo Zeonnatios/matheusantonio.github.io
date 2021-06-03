@@ -1,6 +1,10 @@
 const divImage = document.getElementById('image');
 const buttonCheck = document.getElementById('check');
 const buttonNext = document.getElementById('next');
+const modal = document.querySelector('.modal');
+const closeModalButton = document.querySelector('.modal-close');
+const modalContent = document.querySelector('.modal-content');
+const input = document.getElementById('input');
 
 const getRandomIntInclusive = () => {
   min = Math.ceil(1);
@@ -32,8 +36,31 @@ const nextPokemon = (element) => {
   divImage.appendChild(element);
 };
 
+closeModalButton.addEventListener('click', (event) => {
+  modal.classList.remove('is-active');
+});
+
+const success = `
+<article class="message is-success">
+  <div class="message-header">
+    <h3>Parabéns</h3>
+  </div>
+  <div class="message-body">
+    <p class"paragraph is-primary"> Parabéns. Você acertou !!! <i class="fas fa-check-circle"></i></p>
+  </div>
+</article>`;
+
+const failure = `
+<article class="message is-danger">
+  <div class="message-header">
+    <p>Tente novamente</p>
+  </div>
+  <div class="message-body">
+    <p class"paragraph is-primary"> Que pena. Você errou !!! <i class="fas fa-times-circle"></i></p>
+  </div>
+</article>`;
+
 const setPoints = (event) => {
-  const input = document.getElementById('input');
   const image = document.getElementById('pokemon');
   let points = parseInt(document.querySelector('.points').innerHTML, 10);
   console.log(input.value, image.alt);
@@ -42,7 +69,17 @@ const setPoints = (event) => {
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
     input.value = '';
+    input.disabled = true;
     event.target.disabled = true;
+    modalContent.innerHTML = success;
+    modal.classList.add('is-active');
+  }
+  else {
+    input.value = '';
+    input.disabled = true;
+    event.target.disabled = true;
+    modalContent.innerHTML = failure;
+    modal.classList.add('is-active');
   }
 };
 
@@ -52,5 +89,6 @@ buttonNext.addEventListener('click', () => {
   generateRandomPokemon();
   if (buttonCheck.disabled) {
     buttonCheck.disabled = false;
+    input.disabled = false;
   }
 });
