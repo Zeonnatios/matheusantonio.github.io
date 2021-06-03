@@ -50,6 +50,7 @@ function createProductItemElement(computer) {
   section.appendChild(createCustomElement('span', 'item__sku', computer.id));
   section.appendChild(createCustomElement('span', 'item__title', computer.title));
   section.appendChild(createProductImageElement(computer.thumbnail));
+  section.appendChild(createCustomElement('button', 'item__price', `R$ ${computer.price}`));
   section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'))
     .addEventListener('click', () => addToCart(computer));
   return section;
