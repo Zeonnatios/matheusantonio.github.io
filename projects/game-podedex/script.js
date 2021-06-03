@@ -46,7 +46,7 @@ const success = `
     <h3>Parabéns</h3>
   </div>
   <div class="message-body">
-    <p class"paragraph"> Parabéns. Você acertou !!! <i class="fas fa-check-circle"></i></p>
+    <p class"paragraph is-primary"> Parabéns. Você acertou !!! <i class="fas fa-check-circle"></i></p>
   </div>
 </article>`;
 
@@ -56,7 +56,7 @@ const failure = `
     <p>Tente novamente</p>
   </div>
   <div class="message-body">
-    <p class"paragraph"> Que pena. Você errou !!! <i class="fas fa-times-circle"></i></p>
+    <p class"paragraph is-primary"> Que pena. Você errou !!! <i class="fas fa-times-circle"></i></p>
   </div>
 </article>`;
 
