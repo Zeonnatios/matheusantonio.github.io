@@ -8,8 +8,8 @@ const input = document.getElementById('input');
 const bg_background = document.querySelector('.modal-background');
 
 const getRandomIntInclusive = () => {
-  min = Math.ceil(1);
-  max = Math.floor(150);
+  const min = Math.ceil(1);
+  const max = Math.floor(150);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
@@ -88,6 +88,7 @@ const setPoints = (event) => {
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
     input.value = '';
+    input.disabled = false;
     modalContent.innerHTML = success;
     modal.classList.add('is-active');
     event.target.disabled = true;
