@@ -6,6 +6,7 @@ const closeModalButton = document.querySelector('.modal-close');
 const modalContent = document.querySelector('.modal-content');
 const input = document.getElementById('input');
 const bg_background = document.querySelector('.modal-background');
+const nameContainer = document.getElementById('name');
 
 const getRandomIntInclusive = () => {
   const min = Math.ceil(1);
@@ -22,19 +23,37 @@ const createImagePokemon = ({ id, name }) => {
   return img;
 };
 
+const nextPokemon = (element) => {
+  if (divImage.lastChild) {
+    divImage.removeChild(divImage.lastChild);
+  }
+  divImage.appendChild(element);
+};
+
+const setUnderlineName = ({ name }) => {
+  let underline = '';
+  for (let i = 0; i < name.length; i += 1) {
+    underline += '_';
+  }
+  nameContainer.innerText = underline;
+};
+
+const setName = (pokemonName) => (nameContainer.innerText = pokemonName);
+
 const generateRandomPokemon = async () => {
   const randomId = getRandomIntInclusive();
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
   const pokemon = await response.json();
   const imageElement = createImagePokemon(pokemon);
   nextPokemon(imageElement);
+  setUnderlineName(pokemon);
 };
 
-const nextPokemon = (element) => {
-  if (divImage.lastChild) {
-    divImage.removeChild(divImage.lastChild);
-  }
-  divImage.appendChild(element);
+const reset = () => {
+  input.value = '';
+  input.disabled = false;
+  modal.classList.add('is-active');
+  event.target.disabled = true;
 };
 
 bg_background.addEventListener('click', (event) => {
@@ -87,16 +106,14 @@ const setPoints = (event) => {
     points += 1;
     document.querySelector('.points').innerHTML = points;
     image.classList.remove('no-brightness');
-    input.value = '';
-    input.disabled = false;
     modalContent.innerHTML = success;
-    modal.classList.add('is-active');
-    event.target.disabled = true;
-  } else {
-    input.value = '';
-    event.target.disabled = true;
+    reset();
+    setName(image.alt);
+  } else if (input.value.toLowerCase() !== image.alt.toLowerCase()) {
     modalContent.innerHTML = failure;
-    modal.classList.add('is-active');
+    image.classList.remove('no-brightness');
+    reset();
+    setName(image.alt);
   }
 };
 
@@ -106,6 +123,5 @@ buttonNext.addEventListener('click', () => {
   generateRandomPokemon();
   if (buttonCheck.disabled) {
     buttonCheck.disabled = false;
-    input.disabled = false;
   }
 });
