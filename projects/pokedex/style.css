@@ -134,7 +134,7 @@ h1 {
 }
 
 .card:hover {
-  animation: bounce 0.5s linear;
+  animation: bounce 0.5s infinite;
 }
 
 .card-title {
@@ -155,7 +155,7 @@ h1 {
 }
 
 .card-image {
-  height: 180px;
+  height: 250px;
   position: relative;
   z-index: 2;
 }
