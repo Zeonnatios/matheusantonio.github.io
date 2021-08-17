@@ -16,7 +16,7 @@ const createCustomElement = (tag, classList, innerHTML) => {
 
 const createImageElement = (id, classList, alt) => {
   const img = document.createElement('img');
-  img.src = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`;
+  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
   img.className = classList;
   img.alt = alt;
   return img;
