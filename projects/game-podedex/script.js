@@ -17,7 +17,7 @@ const getRandomIntInclusive = () => {
 const createImagePokemon = ({ id, name }) => {
   const img = document.createElement('img');
   img.id = 'pokemon';
-  img.src = `https://pokeres.bastionbot.org/images/pokemon/${id}.png`;
+  img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
   img.alt = name;
   img.classList.add('no-brightness', 'pokemon-image');
   return img;
