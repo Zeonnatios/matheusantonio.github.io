@@ -51,9 +51,11 @@ h3 {
 }
 
 p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
   text-align: justify;
+}
+
+.subheading {
+  font-size: 1.2rem;
 }
 
 .list-tools {
@@ -159,6 +161,13 @@ section.resume-section {
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
+}
+
+@media only screen and ( max-width : 600px ) {
+  h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
 }
 
 @media (min-width: 768px) {
