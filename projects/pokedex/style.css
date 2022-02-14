@@ -130,7 +130,11 @@ h1 {
 }
 
 .normal {
-  background-color: #a890f0;
+  background-color: #a8a878;
+}
+
+.ghost {
+  background-color: #705898;
 }
 
 .card:hover {

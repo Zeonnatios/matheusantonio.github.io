@@ -3,7 +3,7 @@ const ul = document.querySelector('.pokedex');
 const getPokemonURL = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
 const generatePokemonPromises = () =>
-    Array(150).fill().map((_, index) =>
+    Array(386).fill().map((_, index) =>
       fetch(getPokemonURL(index + 1)).then((response) => response.json())
     );
 
